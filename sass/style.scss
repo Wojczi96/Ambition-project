@@ -1,0 +1,391 @@
+*, *::before, *::after {
+	box-sizing: border-box;
+    }
+$font-text-one: 'Quicksand', sans-serif;
+$font-text-two: 'Signika Negative', sans-serif;
+$font-text-nav: 'Lato', sans-serif;
+/* Global */
+body {
+    padding: 0;
+    margin: 0;
+    color: black;
+    }
+.btn {
+    width: 180px;
+    margin: 30px auto 0;
+    padding: 16px;
+    text-align: center;
+    cursor: pointer;
+    background-color: inherit;
+    text-decoration: none;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 25px;
+    background-size: 100%;
+    color: white;
+    }
+.container {
+    // max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 20px;
+    }
+.background {
+    color: white;
+    background-image: url(https://i.postimg.cc/Bn8tZTXR/pexels-visit-greenland-360912.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    }
+.about-us {
+    position: relative;
+    }
+/* Navigation */
+.navigation {
+    padding: 30px 0;
+    }
+.nav-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.navigation ul {
+    padding-right: 50px;
+    }
+.logo {
+    padding-left: 70px;
+    font-size: 50px;
+}
+.navigation li {
+    display: inline-block;
+    position: relative;
+    margin: 0 20px 0 0;
+    }
+.navigation a {
+    font-family: $font-text-nav;
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    }
+.navigation i {
+    font-size: 20px;
+    padding-left: 15px;
+    }
+ /* Header */
+
+.splash {
+     display: flex;
+     min-height: 600px;
+     }
+.splash-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    max-width: 70%;
+    }
+.splash-inner h1 {
+    font-size: 50px;
+    }
+.thin-text {
+    font-family: $font-text-one;
+    }
+.splash-inner h1 {
+    font-family: $font-text-two;
+    font-weight: 80;
+    }
+.splash-inner h2 {
+    font-family: $font-text-one;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    }
+.splash-inner a {
+    font-family: $font-text-one;
+    }
+
+/* About Us */
+.page-title {
+    font-size: 60px;
+    position: relative;
+    text-align: center;
+    }
+.page-title:after {
+    position: absolute;
+    content: '';
+    bottom: -24px;
+    left: 50%;
+    width: 30px;
+    height: 1px;
+    transform: translateX(-50%);
+    background: #61DD9E;
+    }
+.page-subtitle {
+    text-align: center;
+    }
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 40px 0;
+    }
+.work-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    margin-right: 40px;
+    }
+.work-wrapper:last-of-type {
+    margin-right: 0;
+    }
+.icon-bcg {
+    height: 140px;
+    width: 140px;
+    background-color: #D6D8D9;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    color: grey;
+    }
+.text p {
+    font-size: 20px;
+    color: grey;
+    }
+.push {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    }
+.btn-one {
+    margin: 0;
+    background-color: #77E9B7;
+    border: none;
+    }
+.icon-bcg:hover {
+    background-color: #77E9B7;
+
+    i {
+        color: white;
+        }
+    }
+/* Foto */
+.background-grey {
+    margin: 50px 0;
+    background: #E0E4E4;
+    }
+.foto-text {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 100px 0;
+    }
+.foto {
+    height: 350px;
+    width: 100%;
+    text-align: center;
+    }
+.foto img {
+    object-fit: contain;
+    height: 100%;
+    }
+.text {
+    width: 100%;
+    }
+.text h2 {
+    font-size: 45px;
+    }
+.text p {
+    font-size: 25px;
+    }
+.button-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    }
+/* Foto-text-two */
+.foto-text-two {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 100px 0;
+    }
+
+/* Backround Foto */
+.background-foto {
+    background-image: url(https://i.postimg.cc/rmm0q49f/pexels-fauxels-3183197.jpg);
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-position: center center;
+    background-size: cover;
+    padding: 150px 0;
+    z-index: 1;
+    }
+.bcg-color {
+    background: black;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0px;
+    opacity: 0.6;
+    z-index: -1;
+    }
+.foto-text-wrapper {
+    z-index: 2;
+    }
+.foto-text-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    }
+.foto-url {
+    width: 100px;
+    height: 100px;
+    background-image: url(https://i.postimg.cc/L8CHkWS8/pexels-antoni-shkraba-5292189.jpg);
+    background-position: center center;
+    background-size: cover;
+    border-radius: 50%;
+    }
+.under-text h3 span{
+    color: green;
+    }
+.under-text h3 {
+    font-size: 30px;
+    color: white;
+    }
+.under-text p {
+    font-size: 20px;
+    color: #9FB0B2;
+    }
+/* Our Services */
+.our-services {
+    padding: 40px 0;
+    }
+.our-services h1 {
+    margin: 0;
+    }
+.services-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 60px;
+    }
+.background-grey-second {
+    background: #E0E4E4;
+    }
+.services-wrapper-icon-text {
+    flex: 0 0 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: flex-start;
+    padding: 40px 30px;
+    }
+.services-icon {
+    height: 100px;
+    width: 100px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25rpx;
+    color: green;
+    margin-right: 40px;
+    }
+.services-icon i {
+    font-size: 30px;
+    color: #77E9B7;
+    }
+
+.text-services h1 {
+    font-size: 40px;
+    margin-top: 0;
+    }
+.text-services p {
+    font-size: 16px;
+    }
+/* Our Team */
+
+.team-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    }
+.team-foto-row {
+    display: flex;
+    flex-direction: row;
+    // width: 100%;
+    // justify-content: flex-start;
+    // align-items: flex-start;
+    // height: 100%;
+    }
+.team-foto-row-reverse {
+    display: flex;
+    flex-direction: row-reverse;
+    // width: 100%;
+    // height: 100%;
+    }
+.our-foto {
+    width: 400px;
+    height: 400px;
+    flex: 0 0 25%;
+    }
+.our-foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    }
+.our-foto:hover {
+    background-color: #77E9B7;
+    }
+
+/* Tutaj wyrzej jeszcze jedna sekcja */
+
+/* Map Section */
+.map-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 100px 0;
+    }
+
+/*Foto text*/
+.background-foto-two {
+    background-image: url(https://i.postimg.cc/SsDLWJW3/pexels-eberhard-grossgasteiger-14730094.jpg);
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-position: center center;
+    background-size: cover;
+    padding: 150px 0;
+    z-index: 1;
+    }
+.bcg-color {
+    background: black;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0px;
+    opacity: 0.6;
+    z-index: -1;
+    }
+.foto-text-two {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    }
+.mid-text {
+    text-align: center;
+    justify-content: center;
+    z-index: 2;
+    color: white;
+    }
