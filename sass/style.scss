@@ -4,6 +4,7 @@
 $font-text-one: 'Quicksand', sans-serif;
 $font-text-two: 'Signika Negative', sans-serif;
 $font-text-nav: 'Lato', sans-serif;
+$anim-speed: 0.3s;
 /* Global */
 body {
     padding: 0;
@@ -49,16 +50,19 @@ body {
     justify-content: space-between;
 }
 .navigation ul {
-    padding-right: 50px;
+    padding-right: 100px;
     }
 .logo {
-    padding-left: 70px;
+    padding-left: 100px;
     font-size: 50px;
+}
+.logo span {
+    color: #61DD9E;
 }
 .navigation li {
     display: inline-block;
     position: relative;
-    margin: 0 20px 0 0;
+    padding-right: 30px;
     }
 .navigation a {
     font-family: $font-text-nav;
@@ -322,29 +326,75 @@ body {
 .team-foto-row {
     display: flex;
     flex-direction: row;
-    // width: 100%;
-    // justify-content: flex-start;
-    // align-items: flex-start;
-    // height: 100%;
     }
 .team-foto-row-reverse {
     display: flex;
     flex-direction: row-reverse;
-    // width: 100%;
-    // height: 100%;
     }
 .our-foto {
     width: 400px;
     height: 400px;
     flex: 0 0 25%;
+    position: relative;
+
+    &::before {
+        content: "";
+        background: #77E9B7;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 2;
+        transition-property: bottom, opacity;
+        transition-duration: $anim-speed;
+        }
+
+        .name {
+            font-size: 60px;
+            position: absolute;
+            color: white;
+            z-index: 3;
+            width: 400px;
+            text-align: center;
+            bottom: 45%;
+        }
+
+        .name span {
+            display: block;
+			opacity: 0;
+			position: relative;
+			top: 100px;
+			transition-property: top, opacity;
+			transition-duration: $anim-speed;
+			transition-delay: 0s;
+        }
+
+
+        &:focus,
+		&:hover {
+
+			&:before,
+			span {
+				opacity: 1;
+			}
+
+			&:before {
+				top: 0;
+                opacity: 0.6;
+			}
+
+			span {
+				top: 0;
+			}
+		}
     }
+
 .our-foto img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    }
-.our-foto:hover {
-    background-color: #77E9B7;
     }
 
 /* Tutaj wyrzej jeszcze jedna sekcja */
